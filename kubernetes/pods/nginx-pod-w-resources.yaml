@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: nginx-w-resources
+  name: nginx-w-resources
+spec:
+  containers:
+  - image: nginx
+    name: nginx-w-resources
+    resources:
+      limits:
+        cpu: "0.5"
+        memory: "128Mi"
+      requests:
+        cpu: "0.3"
+        memory: "64Mi"
+      
